@@ -1,0 +1,664 @@
+
+@font-face {
+  font-family: 'flexslider-icon';
+  src: url('fonts/flexslider-icon.eot');
+  src: url('fonts/flexslider-icon.eot?#iefix') format('embedded-opentype'), url('fonts/flexslider-icon.woff') 
+  format('woff'), url('fonts/flexslider-icon.ttf') format('truetype'), url('fonts/flexslider-icon.svg#flexslider-icon') format('svg');
+  font-weight: normal;
+  font-style: normal;
+}
+
+*{
+	margin: 0;
+	padding: 0;
+}
+
+.flexslider{
+    margin-top: 30px;
+	width: 100%;
+  
+	position:none;
+}
+
+.slides{
+	overflow: inherit;
+}
+
+.slides img{
+	width: 100%;
+}
+
+.slides,
+.flex-control-nav,
+.flex-direction-nav {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.flex-control-nav{
+	width: 100%;
+	text-align: center;
+	position: fixed 2;
+	bottom: 5%;
+
+}
+
+.flex-control-nav li{
+	display: inline-block;
+	margin: 0 6px;
+}
+
+.flex-control-nav li a{
+	display: block;
+	background: #777777;
+	width: 12px;
+	height: 12px;
+	border-radius: 12px;
+	text-indent: -9999px;
+}
+
+.flex-control-nav li a:hover{
+	background: #2E2E2E;
+}
+
+.flex-control-nav li a.flex-active{
+	background: #2E2E2E;	
+}
+
+.flex-direction-nav a{
+	display: block;
+	text-decoration: none;
+	position: fixed 2;
+	top: 50%;
+	z-index: 999;
+	width: 40px;
+	height: 40px;
+	overflow: hidden;
+	opacity: 0;
+	-webkit-transition: all 0.3s ease-in-out;
+  -moz-transition: all 0.3s ease-in-out;
+  -ms-transition: all 0.3s ease-in-out;
+  -o-transition: all 0.3s ease-in-out;
+  transition: all 0.3s ease-in-out;
+}
+
+.flex-direction-nav .flex-prev{
+	left: 0;
+}
+
+.flex-direction-nav .flex-next{
+	right: 0;
+}
+
+.flex-direction-nav a:before {
+  font-family: "flexslider-icon";
+  font-size: 40px;
+  display: inline-block;
+  content: '\f001';
+  color: #fff;
+  text-shadow: 1px 1px 0 rgba(255, 255, 255, 0.3);
+}
+.flex-direction-nav a.flex-next:before {
+  content: '\f002';
+}
+
+.flex-caption p{
+	font-family: Lato;
+	position: absolute;
+	top: 50%;
+	text-align: center;
+	width: 100%;
+	font-size: 45px;
+	color: #fff;
+	font-weight: bold;
+}
+
+.flexslider:hover .flex-direction-nav .flex-prev{
+	opacity: 0.7;
+	left: 10px;
+}
+
+.flexslider:hover .flex-direction-nav .flex-prev:hover{
+	opacity: 1;
+}
+
+.flexslider:hover .flex-direction-nav .flex-next{
+	opacity: 0.7;
+	right: 10px;
+}
+
+.flexslider:hover .flex-direction-nav .flex-next:hover{
+	opacity: 1;
+}
+
+
+.titu{
+    position: absolute;
+    font-family:fantasy;
+    font-size: 45px;
+    text-decoration-color: dimgrey;
+    margin-top: 134px;
+}
+
+
+
+body{
+	font-family: "Arial";
+	font-size: 12px;
+	margin:0;
+}
+.marcoseccionesglobal{
+    margin-top:55px;
+	width: 100%;
+    margin-left:
+	display: inline-block;
+}
+.marcosecciones{
+	border:3px solid #CCC;
+	width:100%;
+	display: inline-block;
+}
+
+.imagenmovil{
+	display: none;
+	visibility: hidden;
+
+}
+.parrafo-imagen{
+	display: inline-block;
+	width: 45%;
+}
+.pimagen{
+	display: inline-block;
+	vertical-align: top;
+}
+
+header{
+	width: 100%;
+}
+
+.barranavegacion ul {
+    position: fixed 1;
+	list-style: none;
+	padding: 0;
+	width: 100%;
+
+}
+
+.barranavegacion li{
+	line-height: 3rem;
+	position: relative;
+	flex-grow: 1;
+    position: fixed 1;
+    text-align: center;
+}
+
+.barranavegacion li ul{
+	position: absolute;
+    position: fixed 1;
+}
+.barranavegacion a {
+	color: #ddd;
+    position: fixed 1;
+	display: block;
+	padding: .5px 10px;
+	text-decoration: none;
+	transition: .2s;
+}
+
+.barranavegacion a:hover{
+	background: #f0b429;
+    position: fixed 1;
+	color: #000;
+}
+
+.barranavegacion > ul {
+    position: fixed 1;
+	background: #005883;
+	display: flex;
+	justify-content: center;
+
+}
+.barranavegacion > ul >li {
+	float: left;
+    position: fixed 1;
+}
+
+/*Estilos menu primer nivel*/
+
+.barranavegacion li li{
+	background: #005883;
+	max-height: 0;
+	transition: all .2s;
+	overflow: hidden;
+	width: 100%;
+}
+
+.barranavegacion li:hover li{
+	max-height: 500px;
+	overflow: visible;
+}
+
+
+
+.barranavegacion > ul > li > ul{
+	top:100%;
+}
+/*Estilos menu dispositivos moviles*/
+.mostrar{
+	visibility: hidden;
+}
+#btn-menu{
+	display: none;
+}
+header label{
+	display: none;
+	width: 30px;
+	height: 30px;
+	padding: 10px;
+	border-right: 1px solid #fff;
+}
+header label:hover{
+	cursor: pointer;
+	background: rgba(0,0,0,0.5);
+}
+/*cambia la imagen */
+@media (max-width: 768px){
+	.mostrar{
+	visibility: visible;
+	}
+	.contenedorheader{
+	text-align: center;	
+	background-color: #005883;
+	}
+	.etiqueta{
+		padding: 0;
+	}
+	.imagenprincipal{
+		display: none;
+		visibility: hidden;
+	}
+	.imagenmovil{
+		display: inline-block;
+		visibility: visible;
+	}
+	.parrafo-imagen{
+		width: 100%;
+	}
+
+	.pimagen{
+		display: none;
+		visibility: hidden;
+	}
+	header label {
+		display: block;
+	}
+
+	.barranavegacion{
+		position: fixed;
+		background-color:  #ddd;
+		width: 100%;
+		transform: translateX(-100%);
+		transition: all 0.35s;
+	}
+
+	.barranavegacion ul {
+		flex-direction: column;
+	}
+
+	#btn-menu:checked ~ .barranavegacion{
+		margin:0;
+		transform: translateX(0%);
+	}
+
+	.barranavegacion ul li:hover ul{
+	display: none;
+	position: static;
+	}
+
+@media(max-width: 525px){
+	.imagenmovil{
+		width: 80%;
+	}
+}
+    .segu{
+        margin-left: 10%;
+    }
+}
+/*Twiter redimencionado*/
+@media (max-width: 600px){
+	.marcotwiter{
+		display: block;
+		text-align:center;
+		border: 3px solid;
+		width: 100%;
+	}
+	.marcoseccionesglobal{
+		width: 100%;
+      
+	}
+}
+
+/*conteido de la pagina inicio*/
+section h1{
+	margin-left: 20px;
+}
+section h3{
+	margin-left: 50px;
+}
+
+section ul{
+	margin-left: 20px;
+}
+
+section p{
+	margin-left: 50px;
+	margin-right: 50px;
+	text-align: justify;
+}
+/*Estilos del Footer*/
+footer{
+	background-color: #000;
+	width: 100%;
+	text-align: center;
+}
+
+.contacto{
+	margin-bottom: 0;
+	font-family: "Franklin Gothic Book";
+	font-size: 11px;
+	line-height:16px;
+	text-align: left;
+	color:#fff;
+}
+
+.imageninferior{
+	width: 28%;
+    
+	display:inline-block;
+}
+
+
+.contactoES{
+    width: 35%;
+    display: inline-block;
+    vertical-align: top;
+}
+/*Estilos del footer responsive*/
+@media (max-width: 880px){
+	.imageninferior{
+	width: 100%;
+	display:block;
+	border-bottom: 1px solid #fff;
+	padding-top: 10px;
+	padding-bottom: 10px;
+	}
+
+	.contactoES{
+    width: 100%;
+    display: block;
+	border-bottom: 1px solid #fff;
+	padding-top: 10px;
+	padding-bottom: 10px;
+	}
+	.contacto{
+	margin-bottom: 0;
+	font-family: "Franklin Gothic Book";
+	font-size: 11px;
+	line-height:16px;
+	text-align: center;
+	color:#fff;
+	}
+}
+
+/*Autores*/
+.autores{
+	text-align: center;
+
+}
+.alineacion{
+    margin-top: 25px;
+	display: inline-block;
+}
+}
+.Estudiantes{
+	border: 4px solid #005883;
+
+    margin-top: 28px;
+	border-radius: 0px;
+
+}
+.integrantes{
+	text-align: center;
+	padding: 5px;
+	display: inline-block;
+	margin:10px;
+}
+.integrantes > div{
+	border: 4px solid #005883;
+	border-radius: 0px;
+    width: 500px;
+    height: 500px;
+	display: inline-block;
+}
+
+/*Pagina Lecturas*/
+.cita{
+	margin-bottom: 0;
+}
+.lectura1{
+	text-align: center;
+	padding: 0;
+}
+.subuno{
+    margin-top: 15px;
+	margin-left: 10%;
+	margin-right: 10%;
+
+	background-color: #2332567a;
+	color: #fff;
+}
+
+.contenidotema1{
+	
+	display: inline-block;
+	text-align: justify;
+}
+.contenidotema1 >ul{
+	margin:0;
+}
+.imagentema1{
+
+	margin-left: 10%;
+	display: inline-block;
+	text-align: center;
+	vertical-align: top;
+	background-color: #fff;
+}
+.imagentema1 img{
+		width: 25%;
+}
+.referenciatema1{
+	text-align: left;
+	color: #fff;
+	border-radius: none;
+}
+/*segunda lectura*/
+.titulotema2{
+	text-align: center;
+}
+.lectura2{
+	text-align: center;
+
+}
+.contenidotema2{
+	width: 40%;
+	display: inline-block;
+	background-color: #7c3862;
+	color:#fff;
+	text-align: left;
+	border-radius: 10px;
+}
+/*Estilos lectura 3*/
+	.lectura3{
+		margin-top: 15px;
+		text-align: right;
+	}
+	.subtres{
+		background-color: #617e07;
+		display: inline-block;
+		width: 40%;
+		color: #fff;
+		border-radius: 10px;
+	}
+	.contenido3{
+		display: inline-block;
+	}
+	.titulotema3{
+		text-align: left;
+	}
+
+	/*Estilo lectura 4 */
+	.lectura4{
+		margin-top: 20px;
+	}
+	.subcuatro{
+		background-color: #12538a;
+		display: inline-block;
+		width: 40%;
+		color: #fff;
+        margin-top: 20px;
+		
+	}
+	.contenido4{
+		display: inline-block;
+	}
+	.titulo4{
+		text-align: center;
+	}
+
+	/*Estilo lectura 5*/
+	.lectura5{
+		margin-top: 15px;
+		text-align: center;
+	}
+	.subcinco{
+		background-color: #7c3862;
+		display: inline-block;
+		width: 40%;
+		color: #fff;
+		border-radius: 10px;
+		margin-bottom: 15px;
+	}
+	.contenido5{
+		display: inline-block;
+	}
+	.titulotema5{
+		text-align: left;
+	}
+
+@media	(max-width: 667px){
+	.imagentema1{
+		display: none;
+		visibility: hidden;
+	}
+	.titulotema1{
+		width: 95%;
+		display: block;
+	}
+	.contenidotema1{
+		width: 95%;
+		display: block;
+	}
+	.subuno{
+	margin-left: 0;
+        margin-top: 15px;
+	margin-right: 0;
+	}
+	.cita{
+		font-size: 80%;
+		text-align: justify;	
+	}
+	/*redimencion contenido 2*/
+	.contenidotema2{
+		width: 100%;
+	}
+    
+   
+/*redimencionar lectura 3*/
+.subtres{
+	display: inline-block;
+	width: 100%;
+	}
+/*redimencionar lectura 4*/
+.subcuatro{
+	display: inline-block;
+	width: 100%;
+}
+
+/*redimencionar lectura final*/
+.subcinco{
+	display: inline-block;
+	width: 100%;
+}
+}
+
+/*estilo videos*/
+
+.secvideos{
+	font-family: "Angsana New";
+	font-size: 12px;
+	text-align: center;
+	width: 100%;
+}
+.contenedor1{
+	background-color: #004669;
+	color: #fff;
+	display: inline-block;
+	margin-bottom: 10px;
+}
+.convideo{
+	display: inline-block;
+	border:2px solid;
+}
+
+/*responsive videos*/
+@media	(max-width: 820px){
+
+	.redimencionar{
+		display: block;
+		width: 100%;
+		height: 100%;
+	}
+}
+/*Efecto pagina actividad*/
+
+.efectoactividad{
+	text-align: center;
+	
+}
+.efectoactividad > iframe{
+display: inline-block;
+width: 100%;
+}
+
+/*Contador visitante*/
+.contador{
+	text-align: right;
+	display: inline-block;
+	background-color: #000;
+	border-radius: 10px;
+}
+
+/*redimencionar el contar*/
+@media (max-width: 768px){
+.etiqueta{
+float: left;
+}
+.contador{
+}
+
+}
+
+
